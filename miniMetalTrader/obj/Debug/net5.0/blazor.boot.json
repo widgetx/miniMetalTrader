@@ -195,13 +195,13 @@
       "mscorlib.dll": "sha256-i0zXLOX1XZekwNvRdQK9WDvRWKFggLp7KDCnvMrn+HQ=",
       "netstandard.dll": "sha256-4QNBIB4DMwj82CYd96oFrTh3fcrmyaDjtQ2dBTyWz7Q=",
       "System.Private.CoreLib.dll": "sha256-5Zk+rN+j5FbFEQJdT8YR2O0i6KWpvrERsaPZCv69DmI=",
-      "miniMetalTrader.Shared.dll": "sha256-xfGT2w8BI5m88sIcdE0QV+QzEDKheVlRBVgkhxwGPlQ=",
-      "miniMetalTrader.dll": "sha256-fhUx6Nom7KKHebdGTMBuysDFclsu2ntrtaWJpSIOF8Q="
+      "miniMetalTrader.Shared.dll": "sha256-k67TVVyo7UmreMyfHxm+ytvbY6FdVyqcl+07uHfKZxc=",
+      "miniMetalTrader.dll": "sha256-S947wwhCvP\/2C\/BnIJmtNdZvKOfp5JrCnPaz9i7B0N4="
     },
     "lazyAssembly": null,
     "pdb": {
-      "miniMetalTrader.Shared.pdb": "sha256-lbxRGepmJcjUK8jTnBY04Kzn1kbv3BYLpeJFsNN3HVM=",
-      "miniMetalTrader.pdb": "sha256-kNTeCYBuY+mIrRRLqeLYssC4w7yIQnU\/jEV7UWsdUeA="
+      "miniMetalTrader.Shared.pdb": "sha256-HKWoHUAkWiUnnN4J9iEx\/TWyW2uAzTUgYZmEDHoprzg=",
+      "miniMetalTrader.pdb": "sha256-nFhNmgWdkSzw\/qLwU\/+E2FRBSEEBCmOF2MeCves62OU="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-2ldEe2K8ARFKSIBsv+Hr3iNQzq9qh1H\/dwdu2r+AIyY=",

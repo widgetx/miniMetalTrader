@@ -31,7 +31,7 @@ else
     {
         <div>@client.Name - <em>@client.ClientId</em></div>
 
-        <div>@client.Account.Id - @client.Account.Balance() @client.Account.Currency</div>
+        <div>Balance @client.Account.Balance @client.Account.Currency</div>
 
         <h3>Valuation</h3>
         <!--Sum of all completed transactions-->
@@ -41,8 +41,10 @@ else
 
         <h3>Positions</h3>
         <!--No null check on client collection -->
-        <button class="btn btn-primary" @onclick="@(() => NavManager.NavigateTo($"/buy/{clients.First().ClientId}"))">Buy</button>
-        
+        <button class="btn btn-primary" @onclick="@(() => NavManager.NavigateTo($"/buy/{clients.First().ClientId}/XAU"))">Buy Gold</button>
+        <button class="btn btn-primary" @onclick="@(() => NavManager.NavigateTo($"/buy/{clients.First().ClientId}/XAG"))">Buy Silver</button>
+
+
         <div class="positions">
             <div>Description</div><div>Quantity</div><div>Price</div><div>Value</div>
             @foreach (var tx in client.Account.Positions.Where(t => t.Status == PositionStatus.Filled))

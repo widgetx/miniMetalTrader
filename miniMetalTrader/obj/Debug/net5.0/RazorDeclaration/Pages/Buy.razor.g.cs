@@ -94,7 +94,7 @@ using System.Linq;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/buy/{id}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/buy/{id}/{ticker}")]
     public partial class Buy : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -103,26 +103,54 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\Pages\Buy.razor"
+#line 53 "C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\Pages\Buy.razor"
        
 
     [Parameter]
     public string Id { get; set; }
 
-    //public class PostModel : PageModel
-    //{
-    //    [BindProperty(SupportsGet = true)]
-    //    public string Id { get; set; }
-    //    public void OnGet()
-    //    {
-    //        // the Title property is automatically bound
-    //    }
-    //}
+    [Parameter]
+    public string Ticker { get; set; }
 
+    private Instrument Instrument { get; set; }
+    private Client client { get; set; }
+    private Order order { get; set; }
+
+    protected async Task Preview()
+    {
+        order = await OrderService.CreateOrderAsync(order);
+    }
+
+    protected async Task Confirm()
+    {
+        //NavManager.NavigateTo($"/confirm/{order.PositionId}");
+
+        order = await OrderService.CommitOrderAsync(order);
+        client.Account.Balance -= order.Value();
+        client.Account.Positions.Add(order);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        this.Instrument = ClientService.GetInstruments().Where(i => i.Ticker == Ticker).FirstOrDefault();
+        this.client = ClientService.GetClients().Where(c => c.ClientId == Id).First();
+        order = new Order
+        {
+            Instrument = this.Instrument,
+            OrderType = OrderTypes.Buy,
+            Price = Instrument.Price,
+            Quantity = this.Instrument.MinBuyOrder
+        };
+
+        // async POST to create the order... when order is created nav OR post the data as part of page
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private miniMetalTrader.Shared.Services.OrderService OrderService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private miniMetalTrader.Shared.Services.RatesService RatesService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private miniMetalTrader.Shared.Services.ClientService ClientService { get; set; }
     }
 }

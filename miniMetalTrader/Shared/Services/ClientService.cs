@@ -8,8 +8,11 @@ using miniMetalTrader.Shared;
 
 namespace miniMetalTrader.Shared.Services
 {
+    // Will fiddle about with a singleton for some Inmemory test data before trying to integrate a DI store via browser or MDB/CosmosDB/DocumentDB etc.
     public class ClientService
     {
+        private static Instrument[] _Instruments;
+        private static Client[] _Clients;
         public async Task<Client[]> GetClientsAsync(int page = 0, int size = 10)
         {
             HttpClient httpClient = new HttpClient();
@@ -19,75 +22,82 @@ namespace miniMetalTrader.Shared.Services
             return clients;
         }
 
-        public static Instrument[] GetInstruments()
+        public Instrument[] GetInstruments()
         {
-            var instruments = new Instrument[]
+            return Instruments();
+        }
+
+        public static Instrument[] Instruments()
+        {
+            if (_Instruments is null)
             {
-                new Instrument{ ISIN = "OTC", Description = "Gold 1oz 999", Price=1600, Ticker="AU", ValueDate=DateTime.Now},
-                new Instrument{ ISIN = "OTC", Description = "Silver 1oz 999", Price=22, Ticker="AG", ValueDate=DateTime.Now}
-            };
-            return instruments;
+                _Instruments = new Instrument[] 
+                {
+                    new Instrument { ISIN = "OTC", Description = "Gold 1oz 999", Price = 1600, Ticker = "XAU", ValueDate = DateTime.Now },
+                    new Instrument { ISIN = "OTC", Description = "Silver 1oz 999", Price = 22, Ticker = "XAG", ValueDate = DateTime.Now }
+                };
+            }
+            return _Instruments;
         }
 
         public Client[] GetClients()
         {
-            return ClientService.Clients();
-        }
-
-        public static Client[] Clients()
-        {
-            var inst = GetInstruments();
-
-            return new Client[]
+            Instrument[] inst = GetInstruments();
+            if (_Clients is null)
             {
-                new Client{
-                    Name="Stacker 101",
-                    ClientId="101",
-                    
-                    Account=new Account{ 
-                        Id="101",
-                        Currency="USD",
-                        Positions=new List<IPosition>(){
-                            new Order{
-                                Instrument=inst.Where(i=>i.Ticker=="AU").FirstOrDefault(), 
-                                OrderType=OrderTypes.Buy, 
-                                Price=2000, 
-                                Quantity=1,
-                                PositionId=100001,
-                                Status=PositionStatus.Created
-                            },
-                            new Transaction
-                            {
-                                Instrument=inst.First(i=>i.Ticker=="AU"),
-                                OrderType=OrderTypes.Buy,
-                                Price=2000,
-                                Quantity=1,
-                                PositionId=100001,
-                                Status=PositionStatus.Filled
-                            },
+                _Clients = new Client[]
+              {
+                    new Client{
+                        Name="Mr Big Stacker",
+                        ClientId="101",
 
+                        Account=new Account{
+                            Id="1001",
+                            Currency="USD",
+                            Balance = 50000M,
+                            Positions=new List<IPosition>(){
+                                new Order{
+                                    Instrument=inst.Where(i=>i.Ticker=="XAU").FirstOrDefault(),
+                                    OrderType=OrderTypes.Buy,
+                                    Price=2000,
+                                    Quantity=1,
+                                    PositionId=100001,
+                                    Status=PositionStatus.Created
+                                },
+                                new Transaction
+                                {
+                                    Instrument=inst.First(i=>i.Ticker=="XAU"),
+                                    OrderType=OrderTypes.Buy,
+                                    Price=2000,
+                                    Quantity=1,
+                                    PositionId=100001,
+                                    Status=PositionStatus.Filled
+                                },
 
-                            new Order{
-                                Instrument=inst.First(i=>i.Ticker=="AG"),
-                                OrderType=OrderTypes.Buy,
-                                Price=20,
-                                Quantity=12,
-                                PositionId=100002,
-                                Status=PositionStatus.Created
-                            },
-                            new Transaction
-                            {
-                                Instrument=inst.First(i=>i.Ticker=="AG"),
-                                OrderType=OrderTypes.Buy,
-                                Price=20,
-                                Quantity=12,
-                                PositionId=100002,
-                                Status=PositionStatus.Filled
+                                new Order{
+                                    Instrument=inst.First(i=>i.Ticker=="XAG"),
+                                    OrderType=OrderTypes.Buy,
+                                    Price=20,
+                                    Quantity=12,
+                                    PositionId=100002,
+                                    Status=PositionStatus.Created
+                                },
+                                new Transaction
+                                {
+                                    Instrument=inst.First(i=>i.Ticker=="XAG"),
+                                    OrderType=OrderTypes.Buy,
+                                    Price=20,
+                                    Quantity=12,
+                                    PositionId=100002,
+                                    Status=PositionStatus.Filled
+                                }
                             }
-                        } 
-                    }   
-                }
-            };
+                        }
+                    }
+                };
+            }
+
+            return _Clients;
         }
     }
 }

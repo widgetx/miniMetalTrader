@@ -97,7 +97,7 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 60 "C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\Pages\Index.razor"
+#line 62 "C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\Pages\Index.razor"
       
 
     private Client[] clients;

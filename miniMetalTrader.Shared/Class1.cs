@@ -12,8 +12,10 @@ namespace miniMetalTrader.Shared
 
     public enum PositionStatus
     {
+        Creating,
         Created,
         Submitted,
+        Rejected,
         Executing,
         Filled,
         Cancelled,
@@ -32,10 +34,7 @@ namespace miniMetalTrader.Shared
         public string Id { get; set; }
         public List<IPosition> Positions { get; set; }
         public string Currency { get; set; }
-        public decimal Balance()
-        {
-            return 0;
-        }
+        public decimal Balance { get; set; }
     }
 
     public interface IPosition{
@@ -49,7 +48,10 @@ namespace miniMetalTrader.Shared
 
     public class Order : IPosition
     {
-        
+        public decimal Value()
+        {
+            return (Price * Quantity);
+        }
         public OrderTypes OrderType { get ; set ; }
         public decimal Quantity { get ; set ; }
         public decimal Price { get ; set ; }
@@ -83,5 +85,14 @@ namespace miniMetalTrader.Shared
         public string Description { get; set; }
         public DateTime ValueDate { get; set; }
         public decimal Price { get; set; }
+        public decimal MinBuyOrder { get; set; } = 1;
+    }
+
+    public class FXRate
+    {
+        public string Base { get; set; }
+        public string To { get; set; }
+        public decimal Rate { get; set; }
+        public DateTime ValueDate { get; set; }
     }
 }

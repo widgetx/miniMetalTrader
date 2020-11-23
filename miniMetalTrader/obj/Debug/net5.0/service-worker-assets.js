@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-HftcWxz+j39RW6abZIHieeMa3t\/4GbzpHr64pgxIQ9M=",
+      "hash": "sha256-hXPE0jF2737Ausa4xuLYAWUCuwvZRw0cLZSLST6mg1s=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -785,19 +785,19 @@
       "url": "_framework\/dotnet.5.0.0.js"
     },
     {
-      "hash": "sha256-xfGT2w8BI5m88sIcdE0QV+QzEDKheVlRBVgkhxwGPlQ=",
+      "hash": "sha256-k67TVVyo7UmreMyfHxm+ytvbY6FdVyqcl+07uHfKZxc=",
       "url": "_framework\/miniMetalTrader.Shared.dll"
     },
     {
-      "hash": "sha256-lbxRGepmJcjUK8jTnBY04Kzn1kbv3BYLpeJFsNN3HVM=",
+      "hash": "sha256-HKWoHUAkWiUnnN4J9iEx\/TWyW2uAzTUgYZmEDHoprzg=",
       "url": "_framework\/miniMetalTrader.Shared.pdb"
     },
     {
-      "hash": "sha256-fhUx6Nom7KKHebdGTMBuysDFclsu2ntrtaWJpSIOF8Q=",
+      "hash": "sha256-S947wwhCvP\/2C\/BnIJmtNdZvKOfp5JrCnPaz9i7B0N4=",
       "url": "_framework\/miniMetalTrader.dll"
     },
     {
-      "hash": "sha256-kNTeCYBuY+mIrRRLqeLYssC4w7yIQnU\/jEV7UWsdUeA=",
+      "hash": "sha256-nFhNmgWdkSzw\/qLwU\/+E2FRBSEEBCmOF2MeCves62OU=",
       "url": "_framework\/miniMetalTrader.pdb"
     },
     {
@@ -1585,7 +1585,7 @@
       "url": "_framework\/dotnet.5.0.0.js.gz"
     },
     {
-      "hash": "sha256-nD7lqff9rH1hpv2SFyXfww4JmkBSCMjvh79t4qKKzu8=",
+      "hash": "sha256-TxB2rmNB1l1J+s2YMzMPWaCI\/5v+3\/N2DBer8z6ffOw=",
       "url": "_framework\/miniMetalTrader.Shared.dll.gz"
     },
     {
@@ -1673,5 +1673,5 @@
       "url": "miniMetalTrader.bundle.scp.css"
     }
   ],
-  "version": "H7IXP3Mk"
+  "version": "X61mY3rp"
 };
