@@ -23,8 +23,17 @@ Date  Amount/Qty  Price$
 
 # Tech Stack
 C# Blazor - Testing is InMemory Browser based store
-Later Planned Items:
-API Account and Order API
-API integration with trading interface / transactional message queue etc.
-Integration with miniAccounts 
-Integration with miniCRM
+## Later Planned Items:
+- API Account and Order API
+- API integration with trading interface / transactional message queue etc.
+- Integration with miniAccounts 
+- Integration with miniCRM
+
+
+## First Cut of Blazor Pages
+![Valuation](index.png)
+![Create an Order](order-create.png)
+![Preview before Pushing the Button](order-preview.png)
+![You bought some precious Metal](order-filled.png)
+
+
