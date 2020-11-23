@@ -34,6 +34,6 @@ C# Blazor - Testing is InMemory Browser based store
 ![Valuation](index.png)
 ![Create an Order](order-create.png)
 ![Preview before Pushing the Button](order-preview.png)
-![You bought some precious Metal](index-filled.png)
+![You bought some precious Metal](order-filled.png)
 
 
