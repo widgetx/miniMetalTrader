@@ -32,4 +32,8 @@ C# Blazor - Testing is InMemory Browser based store
 
 ## First Cut of Blazor Pages
 ![Valuation](index.png)
+![Create an Order](order-create.png)
+![Preview before Pushing the Button](order-preview.png)
+![You bought some precious Metal](index-filled.png)
+
 
