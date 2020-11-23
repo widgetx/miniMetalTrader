@@ -28,3 +28,6 @@ API Account and Order API
 API integration with trading interface / transactional message queue etc.
 Integration with miniAccounts 
 Integration with miniCRM
+
+First Cut of Blazor Pages
+![Valuation](index.png)
