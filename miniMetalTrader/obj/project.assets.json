@@ -305,6 +305,16 @@
         "runtime": {
           "lib/net5.0/System.Net.Http.Json.dll": {}
         }
+      },
+      "miniMetalTrader.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/miniMetalTrader.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/miniMetalTrader.Shared.dll": {}
+        }
       }
     },
     "net5.0/browser-wasm": {
@@ -610,6 +620,16 @@
         },
         "runtime": {
           "lib/net5.0/System.Net.Http.Json.dll": {}
+        }
+      },
+      "miniMetalTrader.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/miniMetalTrader.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/miniMetalTrader.Shared.dll": {}
         }
       }
     }
@@ -1141,13 +1161,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "miniMetalTrader.Shared/1.0.0": {
+      "type": "project",
+      "path": "../miniMetalTrader.Shared/miniMetalTrader.Shared.csproj",
+      "msbuildProject": "../miniMetalTrader.Shared/miniMetalTrader.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.0",
-      "System.Net.Http.Json >= 5.0.0"
+      "System.Net.Http.Json >= 5.0.0",
+      "miniMetalTrader.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1157,11 +1183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\widge\\Source\\Repos\\miniMetalTrader\\miniMetalTrader\\miniMetalTrader.csproj",
+      "projectUniqueName": "C:\\Users\\widge\\source\\repos\\miniMetalTrader\\miniMetalTrader\\miniMetalTrader.csproj",
       "projectName": "miniMetalTrader",
-      "projectPath": "C:\\Users\\widge\\Source\\Repos\\miniMetalTrader\\miniMetalTrader\\miniMetalTrader.csproj",
+      "projectPath": "C:\\Users\\widge\\source\\repos\\miniMetalTrader\\miniMetalTrader\\miniMetalTrader.csproj",
       "packagesPath": "C:\\Users\\widge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\widge\\Source\\Repos\\miniMetalTrader\\miniMetalTrader\\obj\\",
+      "outputPath": "C:\\Users\\widge\\source\\repos\\miniMetalTrader\\miniMetalTrader\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1180,7 +1206,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\widge\\source\\repos\\miniMetalTrader\\miniMetalTrader.Shared\\miniMetalTrader.Shared.csproj": {
+              "projectPath": "C:\\Users\\widge\\source\\repos\\miniMetalTrader\\miniMetalTrader.Shared\\miniMetalTrader.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

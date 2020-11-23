@@ -1,7 +1,69 @@
 ﻿@page "/"
+@using miniMetalTrader.Shared;
+@using System.Linq;
+@inject miniMetalTrader.Shared.Services.ClientService ClientService
+@inject NavigationManager NavManager
 
-<h1>Hello, world!</h1>
+<style>
+    .positions {
+        display: grid;
+        grid-template-columns: 40% 20% 20% 60px;
+        grid-template-rows: 20px 20px 20px 20px;
+        justify-content: left;
+    }
 
-Welcome to your new app.
+        .positions:first-child div {
+            font: bold;
+        }
+</style>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<h1>Metals</h1>
+
+@if (clients == null)
+{
+
+}
+else
+{
+    // just show first client from test data unless use a param on the route..
+    <div>Account:</div>
+    @foreach (var client in clients)
+    {
+        <div>@client.Name - <em>@client.ClientId</em></div>
+
+        <div>@client.Account.Id - @client.Account.Balance() @client.Account.Currency</div>
+
+        <h3>Valuation</h3>
+        <!--Sum of all completed transactions-->
+        var valuation = 0;
+
+        <div>@client.Account.Positions.Where(t => t.Status == PositionStatus.Filled).Sum(t => t.Price * t.Quantity).ToString("#,##") @client.Account.Currency</div>
+
+        <h3>Positions</h3>
+        <!--No null check on client collection -->
+        <button class="btn btn-primary" @onclick="@(() => NavManager.NavigateTo($"/buy/{clients.First().ClientId}"))">Buy</button>
+        
+        <div class="positions">
+            <div>Description</div><div>Quantity</div><div>Price</div><div>Value</div>
+            @foreach (var tx in client.Account.Positions.Where(t => t.Status == PositionStatus.Filled))
+            {
+                var val = (tx.Quantity * tx.Price).ToString("#,##");
+                <div>@tx.Instrument.Description</div><div>@tx.Quantity</div><div>@tx.Price</div><div>@val</div>
+            }
+        </div>
+
+
+
+    }
+}
+
+@code{
+
+    private Client[] clients;
+
+    protected override async Task OnInitializedAsync()
+    {
+        clients = ClientService.GetClients();
+    }
+
+}

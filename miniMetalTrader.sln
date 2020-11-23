@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "miniMetalTrader", "miniMetalTrader\miniMetalTrader.csproj", "{7D1B6407-A7B9-4C96-B945-54C09B0D3CC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniMetalTrader.Shared", "miniMetalTrader.Shared\miniMetalTrader.Shared.csproj", "{9C9000D8-F200-440A-9764-4B7445154E6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7D1B6407-A7B9-4C96-B945-54C09B0D3CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D1B6407-A7B9-4C96-B945-54C09B0D3CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D1B6407-A7B9-4C96-B945-54C09B0D3CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9000D8-F200-440A-9764-4B7445154E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9000D8-F200-440A-9764-4B7445154E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9000D8-F200-440A-9764-4B7445154E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9000D8-F200-440A-9764-4B7445154E6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

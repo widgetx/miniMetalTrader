@@ -1,0 +1,13 @@
+[
+  {
+    "clientId": "101",
+    "name": "Mr Trader",
+    "account": {
+      "accountId": 10001,
+      "accountName": "",
+      "currency": "USD",
+      "balance": 0,
+      "value-date": ""
+    }
+  }
+]

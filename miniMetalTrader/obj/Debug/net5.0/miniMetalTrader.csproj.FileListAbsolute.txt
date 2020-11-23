@@ -634,3 +634,9 @@ C:\Users\widge\Source\Repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\ref
 C:\Users\widge\Source\Repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\miniMetalTrader.pdb
 C:\Users\widge\Source\Repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\serviceworkers\wwwroot\service-worker.js
 C:\Users\widge\Source\Repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\service-worker-assets.js
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\bin\Debug\net5.0\wwwroot\_framework\miniMetalTrader.Shared.dll.gz
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\bin\Debug\net5.0\wwwroot\_framework\miniMetalTrader.Shared.dll
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\bin\Debug\net5.0\wwwroot\_framework\miniMetalTrader.Shared.pdb
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\build-gz\O7RXYb8M.gz
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\RazorDeclaration\Pages\Buy.razor.g.cs
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\Razor\Pages\Buy.razor.g.cs

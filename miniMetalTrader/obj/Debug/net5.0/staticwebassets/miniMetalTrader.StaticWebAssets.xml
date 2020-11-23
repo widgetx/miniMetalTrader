@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\widge\Source\Repos\miniMetalTrader\miniMetalTrader\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\widge\Source\Repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader\obj\Debug\net5.0\scopedcss\bundle\" />
 </StaticWebAssets>

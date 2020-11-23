@@ -1,0 +1,9 @@
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\obj\Debug\netcoreapp3.1\miniMetalTrader.Shared.csprojAssemblyReference.cache
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\obj\Debug\netcoreapp3.1\miniMetalTrader.Shared.AssemblyInfoInputs.cache
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\obj\Debug\netcoreapp3.1\miniMetalTrader.Shared.AssemblyInfo.cs
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\obj\Debug\netcoreapp3.1\miniMetalTrader.Shared.csproj.CoreCompileInputs.cache
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\bin\Debug\netcoreapp3.1\miniMetalTrader.Shared.deps.json
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\bin\Debug\netcoreapp3.1\miniMetalTrader.Shared.dll
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\bin\Debug\netcoreapp3.1\miniMetalTrader.Shared.pdb
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\obj\Debug\netcoreapp3.1\miniMetalTrader.Shared.dll
+C:\Users\widge\source\repos\miniMetalTrader\miniMetalTrader.Shared\obj\Debug\netcoreapp3.1\miniMetalTrader.Shared.pdb

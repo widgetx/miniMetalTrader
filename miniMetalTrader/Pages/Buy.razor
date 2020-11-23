@@ -1,0 +1,26 @@
+﻿@page "/buy/{id}"
+@using System;
+@using miniMetalTrader.Shared;
+@using System.Linq;
+@inject miniMetalTrader.Shared.Services.ClientService ClientService
+
+<h3>Buy</h3>
+
+<div>@ClientService.GetClients().Where(c=>c.ClientId == Id).First().Name wants to make an order</div>
+
+@code {
+
+    [Parameter]
+    public string Id { get; set; }
+
+    //public class PostModel : PageModel
+    //{
+    //    [BindProperty(SupportsGet = true)]
+    //    public string Id { get; set; }
+    //    public void OnGet()
+    //    {
+    //        // the Title property is automatically bound
+    //    }
+    //}
+
+}
