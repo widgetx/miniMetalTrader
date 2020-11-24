@@ -9,6 +9,9 @@ Amount  Current Price$ Metal (AU AG etc.) Value (Amount*Price) Local FX (GBP / E
 
 Total USD / (GBP / EUR / CAD / AUD)
 
+After some fiddling around the PWA version (replaces version shown below)
+![Valuation](mmt-Main.png)
+
 ## Order Screen
 Buy
 
@@ -28,6 +31,7 @@ C# Blazor - Testing is InMemory Browser based store
 - API integration with trading interface / transactional message queue etc.
 - Integration with miniAccounts 
 - Integration with miniCRM
+
 
 
 ## First Cut of Blazor Pages
